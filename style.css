@@ -1,0 +1,266 @@
+/*
+Theme Name: Prolens
+*/
+
+
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+    padding-left:0px;
+    padding-right:0px;
+  }
+}
+body {
+    color: #000000;
+    /* background: #00b2f0; */
+    /*background-image: url(img/Prolens-BGround.jpg);*/
+    margin: 0;
+}
+.wrapper{
+	margin:10px 0px;
+
+}
+.main-content {
+    background-color: #fff;
+    overflow: hidden;
+    margin: 14px 0px 0px 0px;
+    
+}
+header.header-section img {
+    width: 100%;
+}
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid gray;
+}
+.content-wrapper.col-md-9 {
+    padding-bottom: 10px;
+    padding-left: 4px;
+}
+.content-wrapper h2{
+	font-family: Verdana, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #9a9a9a;
+    padding-bottom: 10px;
+    margin-top:7px;
+    
+}
+.content-wrapper, .copy-right, footer p {
+    font-size: 11px;
+    text-align: justify;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5;
+}
+ul.items{
+	margin:0px;
+	padding:0px;
+	overflow: hidden;
+}
+ul.items li{
+	width: 31.33%;
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1;
+    margin: 1%;
+    float: left;
+    min-height: 200px;
+}
+
+
+@media screen and (max-width: 480px){
+	ul.items li{
+	width: 198px;
+     margin-bottom:20px;
+}
+ul.items{
+	width: 200px;
+    margin: 0px auto;
+}
+}
+footer {
+    margin-bottom: 25px;
+}
+
+.copy-right p{
+    background: #fff;
+    text-align: center;
+    padding: 35px 0px 10px 0px;
+    color:#000;
+    font-weight:normal;
+}
+footer p {
+    background: #00b2f0;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    color:#fff;
+    font-weight:bold;
+}
+/* widget style */
+.widget {
+    background: #f8f8f9;
+    border: 1px solid #ff8b00;
+    color: #000;
+    margin: 10px 0px;
+}
+h6.widget-title {
+    background: #ff8b00;
+    margin-top: 0px;
+    padding: 3px 12px 3px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.widget ul.sidebar-link {
+    margin: 0px;
+    padding: 10px 5px;
+    list-style: none;
+}
+.widget ul.sidebar-link li {
+    font-size: 11px;
+    padding: 5px 10px;
+    line-height: 12px;
+}
+.widget ul.sidebar-link li a {
+    color: #000;
+    font-size: 14px;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 4px;
+}
+.widget ul.sidebar-link li:hover a {
+    color: #AABBDD;
+    text-decoration: underline;
+}
+.sidebar.col-md-3 {
+    margin-top: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+/* header */
+h1.header-text {
+    float: right;
+    color: #fff;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 0px 4px 8px #666;
+}
+
+
+/* font page */
+ul.items li.default-img h4 {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 200px;
+    color:#666;
+}
+
+ul.items li.default-img {
+    background: url(img/defaul_img_product1.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: table;
+    /* height: 200px; */
+}
+
+/* sidebar cagetory widgets */
+/********************/
+/* EXPANDABLE LIST  */
+/********************/
+#listContainer{
+  margin-top:15px;
+}
+#expList {
+    clear: both;
+    margin: 0px 10px 15px;
+}
+#expList ul, li {
+    list-style: none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+#expList p {
+    margin:0;
+    display:block;
+}
+#expList p:hover {
+    background-color:#121212;
+}
+
+#expList li {
+    line-height: 140%;
+    text-indent: 0px;
+    background-position: 1px 8.5px;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+}
+/* Collapsed state for list element */
+#expList .collapsed, #expList .expanded {
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ie-transition: all 0.5s;
+    transition: all 0.5s;
+
+}
+#expList .collapsed:before, #expList .expanded:before {
+    position: absolute;
+    width: : 100%;
+    height: : 100%;
+    left: 0px;
+    top: 8px;
+    font-family: 'FontAwesome';
+    background-color: #ddd;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 19px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ie-transition: all 0.5s;
+    transition: all 0.5s;
+
+}
+#expList .collapsed:before {
+    content: "\f105";
+}
+#expList .expanded:before {
+    content: "\f107";
+    background-color:#ff8b00;
+    color: #fff;
+}
+.collapsed.expanded ul li {
+    padding-left: 15px !important;
+}
+#expList > li > ul > li:hover a {
+     color: #00b2f0; 
+     text-decoration: none;
+}
+#expList > li:hover > a {
+     color: #ff8b00; 
+     text-decoration: none;
+}
+
+#expList > li > ul > li > a {
+     text-decoration: none;
+}
+.textwidget img {
+    width: 100%;
+}
