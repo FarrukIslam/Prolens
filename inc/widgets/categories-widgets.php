@@ -94,7 +94,7 @@ class Proelens_category_widgets extends WP_Widget
                     if($sub_cats) 
                     {
                       
-                      echo ' <ul>';
+                      echo ' <ul class="drop">';
                         foreach($sub_cats as $sub_category) {
 
 		                    $submetaArray = get_option('product_cat' . $sub_category->term_id);

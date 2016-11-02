@@ -292,3 +292,11 @@ ul.items li.default-img {
     padding: 5px;
     margin-bottom: 30px;
 }
+
+/* Contact us page */
+#submit {
+    background: url(http://azizultex.com/prolens/wp-content/uploads/2016/11/button_continue.gif) no-repeat center center;
+    color: transparent;
+    border: 0;
+    padding: 5px 25px;
+}
