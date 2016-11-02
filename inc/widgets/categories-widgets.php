@@ -68,12 +68,15 @@ class Proelens_category_widgets extends WP_Widget
                     if($cat->category_parent == 0) {
                         $category_id = $cat->term_id;
 
+                    $metaArray = get_option('product_cat' . $category_id);
+					$productCaturl = $metaArray['pr_cat_url'];
+
                 ?> 
 
               <li>
                 <?php       
 
-                echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a>'; 
+                echo '<a href="'. $productCaturl .'">'. $cat->name .'</a>'; 
                 
                     $args2 = array(
                       'taxonomy'     => $taxonomy,
@@ -88,15 +91,16 @@ class Proelens_category_widgets extends WP_Widget
                     );
                     $sub_cats = get_categories( $args2 );
 
-                    
-
-
                     if($sub_cats) 
                     {
                       
                       echo ' <ul>';
                         foreach($sub_cats as $sub_category) {
-                            echo '<li><a href="'. get_term_link($sub_category->slug, 'product_cat') .'">'. $sub_category->name .'</a></li>';
+
+		                    $submetaArray = get_option('product_cat' . $sub_category->term_id);
+							$productsubCaturl = $submetaArray['pr_cat_url'];
+
+                            echo '<li><a href="'. $productsubCaturl .'">'. $sub_category->name .'</a></li>';
                         }
                         echo '</ul>';
                     } 

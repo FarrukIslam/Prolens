@@ -170,14 +170,17 @@ add_action('admin_head', 'prolens_custom_css');
 function prolens_custom_login_page() {
     echo '<style type="text/css">
         h1 a { 
-        	background-image: url(http://localhost/walltechdrywall/wp-content/themes/Prolens/img/logo.png) !important;
-		    background-size: 100% 100% !important;
+        	background-image:url("'. get_stylesheet_directory_uri().'/img/logo.png") !important;
+		    background-size: 55% !important;
 		    height: 90px !important;
 		    margin: 0 !important;
 		    width: 100% !important;
 		}
+		.login h1 {
+		    background-color: #FFF !important;
+		}
 
-        body.login { background-image:url("'. get_stylesheet_directory_uri().'/img/viz360-login-screen.jpg") !important; background-repeat: no-repeat !important; background-attachment: fixed !important; background-position: center !important; position: relative; z-index: 999;}
+        body.login { background-image:url("'. get_stylesheet_directory_uri().'/img/Prolens-BGround.jpg") !important; background-attachment: fixed !important; background-position: center !important; position: relative; z-index: 999;}
   		body.login:before { background-color: rgba(0,0,0,0.7); position: absolute; width: 100%; height: 100%; left: 0; top: 0; content: ""; z-index: -1; }
 
     </style>';
@@ -194,4 +197,57 @@ function prolens_login_logo_url_title() {
 }
 add_filter( 'login_headertitle', 'prolens_login_logo_url_title' );
 
+
+
+//Product Cat creation page
+function product_category_taxonomy_custom_url_meta() {
+    ?>
+    <div class="form-field">
+        <label for="term_meta[pr_cat_url]"><?php _e('Product categories URL', 'prolens'); ?></label>
+        <input type="url" name="term_meta[pr_cat_url]" id="term_meta[pr_cat_url]">
+        <p class="description"><?php _e('Enter your custom URL here', 'prolens'); ?></p>
+    </div>
+    <?php
+}
+
+add_action('product_cat_add_form_fields', 'product_category_taxonomy_custom_url_meta', 10, 2);
+
+//Product Cat Edit page
+function product_category_taxonomy_custom_url_meta_edit($term) {
+
+    //getting term ID
+    $term_id = $term->term_id;
+
+    // retrieve the existing value(s) for this meta field. This returns an array
+    $term_meta = get_option("product_cat" . $term_id);
+    ?>
+    <tr class="form-field">
+        <th scope="row" valign="top"><label for="term_meta[pr_cat_url]"><?php _e('Product categories URL', 'prolens'); ?></label></th>
+        <td>
+            <input type="text" name="term_meta[pr_cat_url]" id="term_meta[pr_cat_url]" value="<?php echo esc_attr($term_meta['pr_cat_url']) ? esc_attr($term_meta['pr_cat_url']) : ''; ?>">
+            <p class="description"><?php _e('Enter your custom URL here', 'prolens'); ?></p>
+        </td>
+    </tr>
+    <?php
+}
+
+add_action('product_cat_edit_form_fields', 'product_category_taxonomy_custom_url_meta_edit', 10, 2);
+
+// Save extra taxonomy fields callback function.
+function save_taxonomy_custom_meta($term_id) {
+    if (isset($_POST['term_meta'])) {
+        $term_meta = get_option("product_cat" . $term_id);
+        $cat_keys = array_keys($_POST['term_meta']);
+        foreach ($cat_keys as $key) {
+            if (isset($_POST['term_meta'][$key])) {
+                $term_meta[$key] = $_POST['term_meta'][$key];
+            }
+        }
+        // Save the option array.
+        update_option("product_cat" . $term_id, $term_meta);
+    }
+}
+
+add_action('edited_product_cat', 'save_taxonomy_custom_meta', 10, 2);
+add_action('create_product_cat', 'save_taxonomy_custom_meta', 10, 2);
 
