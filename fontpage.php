@@ -1,6 +1,7 @@
-
 <?php
-/* Template Name: Fontpage prolens*/
+/* 
+Template Name: Fontpage prolens
+*/
  get_header(); ?>
 
          <?php $meta_data = get_post_meta( get_the_ID(), 'fontpage_meta', true ); ?>
