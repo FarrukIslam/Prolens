@@ -299,6 +299,10 @@ ul.items li.default-img {
     border: 1px solid #ff8b00;
     background-color: #F8F8F9;
     padding: 10px;
+    margin-bottom: 30px;
+}
+.contact_form .continue {
+    margin-bottom: 0;
 }
 .contact_form #submit {
     background: url(http://azizultex.com/prolens/wp-content/uploads/2016/11/button_continue.gif) no-repeat center center;
