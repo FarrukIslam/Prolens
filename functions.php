@@ -24,7 +24,7 @@ if (!class_exists('prolens_scripts_load'))
 	
 			wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), false, 'all');
 
-			wp_enqueue_style('e10-viewport-bug-workaround', get_template_directory_uri() . '/css/e10-viewport-bug-workaround.css', array(), false, 'all');
+			wp_enqueue_style('ie10-viewport-bug-workaround', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css', array(), false, 'all');
 			
 			/* theme stylesheet */
 		    wp_enqueue_style( 'stylesheet', get_stylesheet_uri() ); 
@@ -53,13 +53,7 @@ if (!class_exists('prolens_scripts_load'))
 			
 			/* scripts  js */
 			wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array(), true);
-			/* ie10-viewport-bug-workaround  js */
-			wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom-js.js', array(), true);
 			
-			
-
-
-
 			
 			/* wordpress comments */
 			if (is_singular() && comments_open() && get_option('thread_comments'))
