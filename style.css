@@ -304,7 +304,7 @@ ul.items li.default-img {
 .contact_form .continue {
     margin-bottom: 0;
 }
-.contact_form #submit {
+#submit {
     background: url(http://azizultex.com/prolens/wp-content/uploads/2016/11/button_continue.gif) no-repeat center center;
     color: transparent;
     border: 0;
