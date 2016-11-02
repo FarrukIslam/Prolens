@@ -119,10 +119,10 @@ if (class_exists('prolens_scripts_load'))
 	$prolens_scripts_load = new prolens_scripts_load();
 	}
 
-require_once get_template_directory() .'/cs-framework/cs-framework.php';
 //require_once get_template_directory() .'/inc/widgets.php';
 require_once get_template_directory() .'/inc/prolens-shortcodes.php';
 require_once get_template_directory() .'/inc/woocommerce-support.php';
+require_once get_template_directory() .'/inc/required_plugins.php';
 
 
 
