@@ -264,3 +264,31 @@ ul.items li.default-img {
 .textwidget img {
     width: 100%;
 }
+
+
+/* Faq Page */
+.prolens_faq {
+    font-size: 14px;
+    color: #000;
+}
+.prolens_faq ul li {
+    list-style: disc;
+}
+.prolens_faq ul li a {
+    color: #000;
+}
+.prolens_faq ul li a:hover {
+    color: #AABBDD;
+}
+.prolens_faq strong, .prolens_faq p {
+    font-size: 14px;
+}
+.question {
+    margin-bottom: 40px;
+}
+.continue {
+    border: 1px solid #ff8b00;
+    background-color: #F8F8F9;
+    padding: 5px;
+    margin-bottom: 30px;
+}

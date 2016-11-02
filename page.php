@@ -9,7 +9,7 @@
            <?php get_sidebar() ?>
 
 
-              <div class="content-wrapper col-md-9">
+              <div class="content-wrapper col-md-8">
                
 				<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 				<?php the_content(); ?>
