@@ -4,7 +4,7 @@
                 <?php if($enable_sidebar) : ?>
                   
              
-    <div class="sidebar col-md-4">
+    <div class="sidebar col-md-3">
       <?php dynamic_sidebar( 'fontpage-left-sidebar' ); ?>
 
 

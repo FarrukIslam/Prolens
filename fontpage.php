@@ -14,7 +14,7 @@ Template Name: Fontpage prolens
            <?php get_sidebar() ?>
 
 
-              <div class="content-wrapper col-md-8">
+              <div class="content-wrapper col-md-9">
 
 
               <!-- End Welcome Text section -->
