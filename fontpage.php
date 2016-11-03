@@ -80,7 +80,7 @@ Template Name: Fontpage prolens
                       <?php foreach ($con_list as $info_list_value) : ?>
                       
 
-                            <li><p><b><?php echo $info_list_value['list_heading']; ?></b> S<?php echo $info_list_value['list_content']; ?></p></li>
+                            <li><p><b><?php echo $info_list_value['list_heading']; ?></b> <?php echo $info_list_value['list_content']; ?></p></li>
 
                       <?php endforeach; ?>
                                
