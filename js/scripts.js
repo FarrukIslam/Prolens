@@ -1,6 +1,14 @@
 (function ($) {
     
     jQuery(document).ready(function($){
+
+          $('.free_shipping').click(function() {
+              var newwindow = window.open($(this).prop('href'), '', 'height=430,width=430');
+              if (window.focus) {
+                  newwindow.focus();
+              }
+              return false;
+          });
         
          $('#expList').find('li:has(ul)')
             .click( function(event) {
@@ -43,5 +51,10 @@
           });
         });
     });
+
+
+
+
+
 
 }(jQuery)); 

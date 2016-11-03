@@ -310,3 +310,40 @@ ul.items li.default-img {
     border: 0;
     padding: 5px 25px;
 }
+body.page-template-free-shipping-popup {
+    color: #000000;
+    background: #00b2f0;
+    background-image: url(img/Prolens-BGround.jpg);*/
+    margin: 0;
+}
+#fixedsmall {
+width: 400px;
+background: #ffffff;
+color: #000000;
+margin: 10px auto 10px auto;
+text-align: left;
+}
+#fixedsmall tr.header {
+    background: #ffffff;
+}
+#fixedsmall tr.headerNavigation {
+    background: #00b2f0;
+}
+#fixedsmall td.headerNavigation {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 10px;
+    background: #00b2f0;
+    color: #ffffff;
+    font-weight: bold;
+}
+#fixedsmall center {
+    padding-bottom: 20px;
+}
+#fixedsmall h1 {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #9a9a9a;
+}

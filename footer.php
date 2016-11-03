@@ -20,7 +20,9 @@
 
     </div><!-- /wrapper -->
 
-
+    <div id="free_shipping_popup" style="display: none;">
+      <h2>SOMETHING</h2>
+    </div>
     <?php $ganalytics = cs_get_option('ganalytics'); ?>
       <?php if($ganalytics) : ?>
       <script>
