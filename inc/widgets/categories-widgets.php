@@ -77,35 +77,34 @@ class Proelens_category_widgets extends WP_Widget
                 <?php       
 
                 echo '<a href="'. $productCaturl .'">'. $cat->name .'</a>'; 
-                
-                    $args2 = array(
-                      'taxonomy'     => $taxonomy,
-                      'child_of'     => 0,
-                      'parent'       => $category_id,
-                      'orderby'      => $orderby,
-                      'show_count'   => $show_count,
-                      'pad_counts'   => $pad_counts,
-                      'hierarchical' => $hierarchical,
-                      'title_li'     => $title,
-                      'hide_empty'   => $empty
-                    );
-                    $sub_cats = get_categories( $args2 );
 
-                    if($sub_cats) 
-                    {
-                      
-                      echo ' <ul class="drop">';
-                        foreach($sub_cats as $sub_category) {
 
-		                    $submetaArray = get_option('product_cat' . $sub_category->term_id);
-							$productsubCaturl = $submetaArray['pr_cat_url'];
+					 $term_id = $category_id;
+					
+					
+					$taxonomy_name = 'product_cat';
+					$termchildren = get_term_children( $term_id, $taxonomy_name );
 
-                            echo '<li><a href="'. $productsubCaturl .'">'. $sub_category->name .'</a></li>';
-                        }
-                        echo '</ul>';
-                    } 
+					if($termchildren) :
+
+					echo '<ul class="drop">';
+					foreach ( $termchildren as $child ) {
+						$term = get_term_by( $term_id, $child, $taxonomy_name );
+
+							$submetaArray = get_option('product_cat' . $term->term_id);
+					 		$productsubCaturl = $submetaArray['pr_cat_url'];
+
+						echo '<li><a href="'. $productsubCaturl .'">' . $term->name . '</a></li>';
+					}
+					echo '</ul>';
+
+					endif;
+
 
                     ?>
+
+
+
                 </li>
 
                 <?php }  }    ?>
